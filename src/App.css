@@ -1,23 +1,30 @@
+/* Global styles */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  box-sizing: border-box; /* Added for consistent box sizing */
 }
 
+/* Logo styles */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  display: inline-block; /* Ensure logo is inline-block for responsiveness */
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Keyframe animation for spinning logo */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -27,16 +34,80 @@
   }
 }
 
+/* Apply the spin animation to the second link only when motion preference is enabled */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
+/* Card styles */
 .card {
   padding: 2em;
+  display: inline-block; /* Ensures cards are responsive and don't overflow */
+  max-width: 100%; /* Makes sure cards don't overflow */
+  box-sizing: border-box;
 }
 
+/* Link styles */
 .read-the-docs {
   color: #888;
+}
+
+/* Responsive Design */
+
+/* For small screens (mobiles), adjust padding and layout */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem; /* Reduce padding for mobile */
+  }
+
+  .logo {
+    height: 4em; /* Smaller logo size on mobile */
+    padding: 1em; /* Adjust padding around the logo */
+  }
+
+  .card {
+    padding: 1em; /* Reduce padding in cards for mobile */
+  }
+  
+  .read-the-docs {
+    font-size: 0.9rem; /* Slightly smaller text on mobile */
+  }
+}
+
+/* For medium screens (tablets), adjust layout slightly */
+@media (max-width: 1024px) {
+  #root {
+    padding: 1.5rem; /* Adjust padding for tablet-sized screens */
+  }
+
+  .logo {
+    height: 5em; /* Adjust logo size for medium screens */
+    padding: 1.2em; /* Adjust padding around the logo */
+  }
+
+  .card {
+    padding: 1.5em; /* Adjust padding for cards on medium screens */
+  }
+
+  .read-the-docs {
+    font-size: 1rem; /* Adjust font size */
+  }
+}
+
+/* For very large screens (desktops), maintain large logo and card padding */
+@media (min-width: 1280px) {
+  #root {
+    padding: 3rem; /* Add more padding for larger screens */
+  }
+
+  .logo {
+    height: 7em; /* Bigger logo for large screens */
+    padding: 2em; /* Adjust padding around the logo */
+  }
+
+  .card {
+    padding: 2.5em; /* More padding in cards for large screens */
+  }
 }
