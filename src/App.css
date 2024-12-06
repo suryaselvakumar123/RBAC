@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 
@@ -24,7 +24,7 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-/
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -44,19 +44,23 @@
 
 .card {
   padding: 2em;
-  display: inline-block;
+  display: inline-block; 
   max-width: 100%; 
   box-sizing: border-box;
 }
+
 
 .read-the-docs {
   color: #888;
 }
 
 
+
+
 @media (max-width: 768px) {
   #root {
-    padding: 1rem;
+    padding: 1rem; 
+  }
 
   .logo {
     height: 4em; 
@@ -65,15 +69,18 @@
 
   .card {
     padding: 1em; 
+  }
   
   .read-the-docs {
     font-size: 0.9rem; 
+  }
 }
 
 
 @media (max-width: 1024px) {
   #root {
     padding: 1.5rem; 
+  }
 
   .logo {
     height: 5em; 
@@ -93,6 +100,7 @@
 @media (min-width: 1280px) {
   #root {
     padding: 3rem; 
+  }
 
   .logo {
     height: 7em; 
@@ -100,6 +108,6 @@
   }
 
   .card {
-    padding: 2.5em;
+    padding: 2.5em; 
   }
 }
